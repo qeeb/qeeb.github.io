@@ -18,7 +18,7 @@ header{
   position: relative;
 }
 header section{
-  width: 30%;
+  width: 50%;
   height: 100%;
   float: left;
 }
@@ -40,7 +40,7 @@ header section{
   cursor: pointer;
 }
 header #nav{
-  width: 70%;
+  width: 50%;
   height: 100%;
   padding: 8px 0;
   float: right;
