@@ -31,6 +31,8 @@ h6{font-size: 1em}
   z-index: -100;
   filter: blur(8px);
   -webkit-filter: blur(5px);
+  filter: sepia(.8);
+  -webkit-filter: sepia(.8);
   transform: scale(1.02);
 }
 
