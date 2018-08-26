@@ -4,108 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Sardar Khan</title>
 </head>
 <body>
-  <header id="header">
-    <section>
-      <h1 id="div-name">SARDAR KHAN</h1>
-      <p id="title">FULL STACK WEB DEVELOPER</p>
-    </section>
-    <div id="bars">
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-    </div>  
-    <nav id="nav">
-      <div id="menu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+  <div id="bg-image"></div>
+  <header id="header" class="container">
+    <div id="name-title" class="text-white">
+      <a class="hover-bb" href="">
+        <h4 id="name">SARDAR KHAN</h4>
+        <p id="title">FULL-STACK WEB DEVELOPER</p>
+      </a>
+    </div>
+    <div id="menu-bars">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a class="link active hover-bb" href="#home">Home</a></li>
+        <li><a class="link hover-bb" href="#projects">Projects</a></li>
+        <li><a class="link hover-bb" href="mailto:sarkhan.naqib@gmail.com">Contact</a></li>
+      </ul>
     </nav>
   </header>
-  <div></div>
-  <main>
-    <section id="home">
-      <p>Hello, My name is <h2>SARDAR KHAN NAQIBULLAH</h2> I'am full stack web developer based in Paris, France.</p>
-    </section>
-    <section id="projects">
-      <div class="current-project">
-        <h4 class="border-bottom">Current projects</h4>
-        <div class="project">
-          <div class="project-image-holder">
-            <img src="assets/images/KLR.JPG" alt="Head Phone landing page">
+  <main id="main-container">
+    <div id="home">
+      <div id="profile">
+        <div class="profile-img-holder">
+          <img id="profile-image" src="assets/images/profile.jpg" alt="Sardar Khan">
+        </div>
+        <div class="home-desc">
+          <p style="line-height: 30px; font-size: 30px;" class="center normal text-white">Hello, my name is 
+            <span class="name">SARDAR KHAN </span>i'm a full-stack web developer based in Paris, France. I'm available for new opportunities. If you are looking to hire 
+            <a class="anchor" href="#contact">get in touch</a>.
+          </p>
+        </div>
+      </div>
+      <div id="skills">
+        <h4 class="text-white center">Skills i have</h4>
+        <div class="tech">
+          <div style="width: 90%" class="tech-length blue-bg">
+            <p class="left tech-name">HTML5</p>
+            <p class="tech-percentage">90%</p>
           </div>
-          <div class="project-detail">
-            <a class="project-link" href="">
-              <h2>KLR#</h2>
-            </a>
-            <p>KLR# is e-commerce website for selling bio skin care products.</p>
+        </div>
+        <div class="tech">
+          <div style="width: 80%" class="tech-length blue-bg">
+            <p class="left tech-name">CSS3</p>
+            <p class="tech-percentage">90%</p>
+          </div>
+        </div>
+        <div class="tech">
+          <div style="width: 60%" class="tech-length blue-bg">
+            <p class="left tech-name">Sass</p>
+            <p class="tech-percentage">60%</p>
+          </div>
+        </div>
+        <div class="tech">
+          <div style="width: 80%" class="tech-length blue-bg">
+            <p class="left tech-name">Javascript</p>
+            <p class="tech-percentage">80%</p>
+          </div>
+        </div>
+        <div class="tech">
+          <div style="width: 80%" class="tech-length blue-bg">
+            <p class="left tech-name">Jquery</p>
+            <p class="tech-percentage">80%</p>
+          </div>
+        </div>
+        <div class="tech">
+          <div style="width: 80%" class="tech-length blue-bg">
+            <p class="left tech-name">PHP</p>
+            <p class="tech-percentage">80%</p>
+          </div>
+        </div>
+        <div class="tech">
+          <div style="width: 75%" class="tech-length blue-bg">
+            <p class="left tech-name">SQL</p>
+            <p class="tech-percentage">75%</p>
+          </div>
+        </div>
+        <div class="tech">
+          <div style="width: 60%" class="tech-length blue-bg">
+            <p class="left tech-name">Photoshop</p>
+            <p class="tech-percentage">60%</p>
           </div>
         </div>
       </div>
-      <div class="learning-project">
-        <h3 class="border-bottom">Learning purpose projects</h3>
-        <div class="project">
+    </div>
+    <div id="projects">
+      <ul>
+        <li class="project">
+          <h3 class="project-name">
+            <a href="project">Project name</a>
+          </h3>
+          <div class="project-desc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ducimus cupiditate voluptate. Doloremque saepe obcaecati maiores labore qui, minus quasi optio aspernatur.</p>
+          </div>
           <div class="project-image-holder">
-            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1231098.RJqORr.625ca685-da85-4b21-ba76-1fb8dfafaca9.png" alt="Head Phone landing page">
+            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1231098.RJqORr.625ca685-da85-4b21-ba76-1fb8dfafaca9.png" alt="" class="project-image img-responsive">
           </div>
-          <div class="project-detail">
-            <a class="project-link" href="https://codepen.io/KhanSar/pen/RJqORr">
-              <h2>BeSound</h2>
-            </a>
-            <p>This project was a challenge from FreeCodeCamp to create a landing page for learning purpose</p>
-          </div>
-        </div>
-        <div class="project"> 
-          <div class="project-image-holder">
-            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1231098.NjypdQ.840bd501-1927-4fe8-b47e-e192e652f76f.png" alt="Head Phone landing page">
-          </div>
-          <div class="project-detail">
-            <a class="project-link" href="https://codepen.io/KhanSar/full/NjypdQ/">
-              <h2>Photographer portfolio</h2>
-            </a>
-            <p>This was a challenge from FreeCodeCamp to create a portfolio for learning purpose</p>
-          </div>
-        </div>
-        <div class="project"> 
-          <div class="project-image-holder">
-            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1231098.MXZwJg.94fd2012-9207-49d0-a9df-7bb3ca09a9fd.png" alt="Head Phone landing page">
-          </div>
-          <div class="project-detail">
-            <a class="project-link" href="https://codepen.io/KhanSar/full/MXZwJg/">
-              <h2>Technical Documentation</h2>
-            </a>
-            <p>This was a challenge from FreeCodeCamp to create a technical documentation for learning purpose</p>
-          </div>
-        </div>
-        <div class="project"> 
-          <div class="project-image-holder">
-            <img src="https://s3-us-west-2.amazonaws.com/i.cdpn.io/1231098.VWwXXX.196f8ab2-0fdb-485f-8d37-47c26f70b0fd.png" alt="Head Phone landing page">
-          </div>
-          <div class="project-detail">
-            <a class="project-link" href="https://codepen.io/KhanSar/pen/VWwXXX">
-              <h2>Wikipedia search API</h2>
-            </a>
-            <p>Wikipedia search was a challenge from FreeCodeCamp to get result from Wikipedia API</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact">
-      <a target="_blank" href="mailto:sarkhan.naqib@gmail.com" class="link-button" href="">
-        <i class="far fa-envelope"></i>
-        <span>Contact me</span>
-      </a>  
-    </section>
-    <footer>
-      <p>&copy; SARDARKHAN 2018</p>
-    </footer>
+        </li>
+      </ul>
+    </div>
   </main>
   <script src="js/app.js"></script>
 </body>

@@ -1,8 +1,28 @@
 document.addEventListener("DOMContentLoaded", function(){
+  showOnLoad();
   menuToggle();
-  
+  classActive();
 });
-
+function classActive(){
+  let link = document.querySelectorAll(".link");
+  for(var i=0; i < link.length; i++){
+    link[i].addEventListener("click", function(){
+      let current = document.querySelector(".active");
+      current.className = current.className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+}
+function showOnLoad(){
+  let home = document.getElementById("profile");
+  let skills = document.getElementById("skills");
+  window.addEventListener("load", () => {
+    if(home && skills){
+      home.classList.add("home-expand");
+      skills.classList.add("skills-expand");
+    }
+  })
+}
 function menuToggle(){
   const menuIcon = document.getElementById("bars");
   if(menuIcon){
