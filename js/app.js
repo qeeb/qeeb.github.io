@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
   showOnLoad();
   menuToggle();
   classActive();
+  onScrollTabChange();
 });
 function classActive(){
   let link = document.querySelectorAll(".link");
@@ -17,11 +18,14 @@ function showOnLoad(){
   let home = document.getElementById("profile");
   let skills = document.getElementById("skills");
   window.addEventListener("load", () => {
-    if(home && skills){
+    if(home){
       home.classList.add("home-expand");
-      skills.classList.add("skills-expand");
+      // skills.classList.add("skills-expand");
     }
   })
+}
+function onScrollTabChange(){
+  
 }
 function menuToggle(){
   const menuIcon = document.getElementById("bars");
