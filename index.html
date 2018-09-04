@@ -11,28 +11,30 @@
 </head>
 <body>
   <div id="bg-image"></div>
-  <header id="header" class="container">
-    <div id="name-title" class="text-white">
-      <a class="hover-bb" href="">
-        <h4 id="name">SARDAR KHAN</h4>
-        <p id="title">FULL-STACK WEB DEVELOPER</p>
-      </a>
+  <header id="header">
+    <div id="header-wrapper" class="header-wrapper header-padding container">
+      <div id="name-title">
+        <a class="hover-bb" href="">
+          <h4 id="name">SARDAR KHAN</h4>
+          <p id="title" class="text-white">FULL-STACK WEB DEVELOPER</p>
+        </a>
+      </div>
+      <div id="menu-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="link active hover-bb" href="#header">Home</a></li>
+          <li><a  class="link hover-bb" href="#projects">Projects</a></li>
+          <li><a  class="link hover-bb" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div id="menu-bars">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <nav>
-      <ul>
-        <li><a class="link active hover-bb" href="#home">Home</a></li>
-        <li><a class="link hover-bb" href="#projects">Projects</a></li>
-        <li><a class="link hover-bb" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
   </header>
   <main id="main-container">
-    <div id="home" class="container">
+    <div id="home" class=" container">
       <div id="profile">
         <div class="profile-img-holder">
           <img id="profile-image" src="assets/images/profile.jpg" alt="Sardar Khan">
@@ -40,7 +42,7 @@
         <div class="home-desc">
           <p style="line-height: 30px; font-size: 30px;" class="center normal text-white">Hello, my name is 
             <span class="name">SARDAR KHAN </span>i'm a full-stack web developer based in Paris, France. I'm available for new opportunities. If you are looking to hire 
-            <a class="anchor" href="#contact">get in touch</a>.
+            <a class="get-in-touch" href="#contact">get in touch</a>.
           </p>
         </div>
       </div>
@@ -130,11 +132,30 @@
               <a href="https://codepen.io/KhanSar/full/RJqORr/" class="project-link" target="_blank">
                 <h5>BeSound</h5>
               </a>
-              <p class="project-desc"><strong>BeSound</strong> is a Landing page which was a challenge from <a href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
+              <p class="project-desc"><strong>BeSound</strong> is a Landing page which was a challenge from <a class="anchor" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
               <p class="tech-used">Technology used</p>
               <ul class="center">
                 <li class="small-tech">HTML5</li>
                 <li class="small-tech">CSS3</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="project project-half-gray">
+          <div class="project-wrapper">
+            <div class="project-img-holder">
+              <img src="assets/images/portfolio.png" alt="" class="center img-responsive">
+            </div>
+            <div class="project-detail center ">
+              <a href="https://codepen.io/KhanSar/pen/NjypdQ" class="project-link" target="_blank">
+                <h5>Portfolio</h5>
+              </a>
+              <p class="project-desc"><strong>Portfolio</strong> was a challenge from <a class="anchor" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
+              <p class="tech-used">Technology used</p>
+              <ul class="center">
+                <li class="small-tech">HTML5</li>
+                <li class="small-tech">CSS3</li>
+                <li class="small-tech">bootstrap 3</li>
               </ul>
             </div>
           </div>
