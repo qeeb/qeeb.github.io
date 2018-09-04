@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
   showOnLoad();
-  menuToggle();
   classActive();
-  onScrollTabChange();
+  onScrollHeaderChange();
 });
 function classActive(){
   let link = document.querySelectorAll(".link");
@@ -12,11 +11,70 @@ function classActive(){
       current.className = current.className.replace(" active", "");
       this.className += " active";
     });
+    link[i].onclick = scroll;
+    link[i].addEventListener("scroll", onScrollActive);
+  }
+}
+function scroll(e) {
+  e.preventDefault();
+  var id = this.getAttribute('href').replace('#', '');
+  var target = document.getElementById(id).getBoundingClientRect().top;
+  animateScroll(target);
+}
+function onScrollActive(e){
+  e.preventDefault();
+  var id = this.getAttribute('href').replace('#', '');
+  var projects = document.getElementById(id).offsetTop;
+  if(scrollY >= projects){
+    let current = document.querySelector(".active");
+      current.className = current.className.replace(" active", "");
+      nextElementSibling.className += " active";
+  }
+}
+function animateScroll(targetHeight) {
+  var initialPosition = window.scrollY;
+  var SCROLL_DURATION = 100;
+  var step_x = Math.PI / SCROLL_DURATION;
+  var step_count = 0;
+  requestAnimationFrame(step);
+  function step() {
+      if (step_count < SCROLL_DURATION) {
+          requestAnimationFrame(step);
+          step_count++;
+          window.scrollTo(0, initialPosition + targetHeight * 0.25 * Math.pow((1 - Math.cos(step_x * ++step_count)), 2));
+      }
+  }
+}
+function onScrollHeaderChange(){
+  let projects = document.getElementById("projects");
+  let projectsTop = document.getElementById("projects").offsetTop;
+  let header = document.getElementById("header-wrapper");
+  let home = document.getElementById("home");
+  let headerHeight = header.offsetHeight;
+  window.onscroll = function(){
+    // if scroll come at the middle of home section 
+    if(scrollY >= projectsTop - (home.offsetHeight/2)){
+      // add no-height class to header so i can add later header-fixed and animation 
+      header.classList.add("no-height");
+      // if scroll is in the position of home section height
+      if(scrollY >= home.offsetHeight - 20){
+        // add header fixed and animation
+        header.classList.add("header-fixed");
+        header.classList.add("header-animation");
+      }else{
+        // remove animation
+        header.classList.remove("header-animation");
+      }
+    }else{
+      // remove fixed header and no height
+      header.classList.remove("header-fixed");
+      header.classList.remove("no-height");
+    }
   }
 }
 function showOnLoad(){
   let home = document.getElementById("profile");
-  let skills = document.getElementById("skills");
+  // let skills = document.getElementById("skills");
   window.addEventListener("load", () => {
     if(home){
       home.classList.add("home-expand");
@@ -24,39 +82,5 @@ function showOnLoad(){
     }
   })
 }
-function onScrollTabChange(){
-  
-}
-function menuToggle(){
-  const menuIcon = document.getElementById("bars");
-  if(menuIcon){
-    const header = document.getElementById("header");
-    const menu = document.getElementById("menu");
-    var menuList = menu.classList;
-    var icons = document.querySelectorAll(".icon");
-    var nav = document.querySelector("#header > #nav");    
-    menuIcon.addEventListener("click", () => {
-      menuList.toggle("show-menu");
-      nav.classList.toggle("nav-height");
-      header.classList.add("overflow-visible");
-      for (var i = 0; i < icons.length; i++){
-        icons[i].classList.toggle("icons-together");
-      }
-    });
-    const projects = document.getElementById("projects");
-    const projectsTop = projects.offsetTop;
-    window.addEventListener("scroll", () => {
-      var scrollHeight = window.scrollY;
-      if(scrollHeight > 0){
-        header.classList.add("no-header");
-        if(scrollHeight >= projectsTop){
-          header.classList.remove("no-header");
-        }else{
-          menuIcon.style.top = "20px";
-        }
-      }else{
-        header.classList.remove("no-header");
-      }
-    });
-  }
-}
+
+
