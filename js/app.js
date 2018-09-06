@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function(){
   showOnLoad();
   classActive();
   onScrollHeaderChange();
+  activeOnScroll();
+
 });
 function classActive(){
   let link = document.querySelectorAll(".link");
@@ -12,25 +14,26 @@ function classActive(){
       this.className += " active";
     });
     link[i].onclick = scroll;
-    link[i].addEventListener("scroll", onScrollActive);
   }
 }
 function scroll(e) {
   e.preventDefault();
   var id = this.getAttribute('href').replace('#', '');
-  var target = document.getElementById(id).getBoundingClientRect().top;
-  animateScroll(target);
-}
-function onScrollActive(e){
-  e.preventDefault();
-  var id = this.getAttribute('href').replace('#', '');
-  var projects = document.getElementById(id).offsetTop;
-  if(scrollY >= projects){
-    let current = document.querySelector(".active");
-      current.className = current.className.replace(" active", "");
-      nextElementSibling.className += " active";
+  var target = document.getElementById(id);
+  var targetTop = target.getBoundingClientRect().top;
+  
+  if(target.id === "home"){
+    var home = document.getElementById(id).etBoundingClientRectg().top;
+    if(scrollY === 0){
+      animateScroll(targetTop - home);
+    }else{
+      animateScroll(targetTop + home);
+    }
+  }else{
+    animateScroll(targetTop);
   }
 }
+
 function animateScroll(targetHeight) {
   var initialPosition = window.scrollY;
   var SCROLL_DURATION = 100;
@@ -47,11 +50,11 @@ function animateScroll(targetHeight) {
 }
 function onScrollHeaderChange(){
   let projects = document.getElementById("projects");
-  let projectsTop = document.getElementById("projects").offsetTop;
+  let projectsTop = projects.offsetTop;
   let header = document.getElementById("header-wrapper");
   let home = document.getElementById("home");
-  let headerHeight = header.offsetHeight;
   window.onscroll = function(){
+    activeOnScroll();
     // if scroll come at the middle of home section 
     if(scrollY >= projectsTop - (home.offsetHeight/2)){
       // add no-height class to header so i can add later header-fixed and animation 
@@ -71,6 +74,9 @@ function onScrollHeaderChange(){
       header.classList.remove("no-height");
     }
   }
+}
+function activeOnScroll(){
+ 
 }
 function showOnLoad(){
   let home = document.getElementById("profile");
