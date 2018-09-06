@@ -1,0 +1,58 @@
+@media only screen and (max-width: 850px){
+  .container {
+    width: 95%;
+    padding: 0 2.5%;
+  }
+  .header-padding{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #name{
+    font-size: 20px;
+  }
+  #title{
+    font-size: 12px;
+  }
+  #navbar{
+    display: none;
+  }
+  #profile-desc{
+    font-size: 22px;
+  }
+  .project{
+    height: 100%;
+    min-height: 100vh;
+    max-height: 700px;
+  }
+  .project-wrapper {
+    width: calc(100% - 5%);
+    margin: 0 2.5%;
+    height: calc(100% - 2px);
+    min-height: 100vh;
+    max-height: 700px;
+    padding-bottom: 20px;
+  }
+  .project-img-holder {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-right: 0;
+    border-right: none;
+    float: unset;
+  }
+  .project-img-holder, .project-detail {
+    position: relative;
+    top: 10px;
+    transform: translateY(0);
+  }
+  projec
+  .img-responsive{
+    max-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .project-detail {
+    width: 100%;
+    margin: 0px;
+  }
+}
