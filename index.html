@@ -14,20 +14,20 @@
 <body>
   <div id="bg-image"></div>
   <header id="header">
-    <div id="header-wrapper" class="header-wrapper header-padding container">
+    <div id="header-wrapper" class="header-wrapper">
       <div id="name-title">
         <a class="hover-bb" href="">
-          <h4 id="name">SARDAR KHAN</h4>
+          <h1 id="name">SARDAR KHAN</h1>
           <p id="title" class="text-white">FULL-STACK WEB DEVELOPER</p>
         </a>
       </div>
       <div id="menu-bars">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
       </div>
       <nav id="navbar">
-        <ul id="nav-links">
+        <ul id="nav-links" class="nav-expand">
           <li><a class="link active hover-bb" href="#home">Home</a></li>
           <li><a  class="link hover-bb" href="#projects">Projects</a></li>
           <li><a  class="link hover-bb" href="#contact">Contact</a></li>
@@ -36,135 +36,85 @@
     </div>
   </header>
   <main id="main-container">
-    <div id="home" class=" container">
+    <div id="home" class="section container">
       <div id="profile">
         <div class="profile-img-holder">
           <img id="profile-image" src="assets/images/profile.jpg" alt="Sardar Khan">
         </div>
         <div class="home-desc">
-          <p id="profile-desc" class="center normal text-white">Hello, my name is 
+          <p id="profile-desc" class="normal text-white">Hello, my name is 
             <span class="name">SARDAR KHAN </span>i'm a full-stack web developer based in Paris, France. I'm available for new opportunities. If you are looking to hire 
             <a class="get-in-touch" href="#contact">get in touch</a>.
           </p>
         </div>
       </div>
-      <!-- <div id="skills">
-        <h4 class="text-white center">Skills i have</h4>
-        <div class="tech">
-          <div style="width: 90%" class="tech-length blue-bg">
-            <p class="left tech-name">HTML5</p>
-            <p class="tech-percentage">90%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 80%" class="tech-length blue-bg">
-            <p class="left tech-name">CSS3</p>
-            <p class="tech-percentage">90%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 60%" class="tech-length blue-bg">
-            <p class="left tech-name">Sass</p>
-            <p class="tech-percentage">60%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 80%" class="tech-length blue-bg">
-            <p class="left tech-name">Javascript</p>
-            <p class="tech-percentage">80%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 80%" class="tech-length blue-bg">
-            <p class="left tech-name">Jquery</p>
-            <p class="tech-percentage">80%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 80%" class="tech-length blue-bg">
-            <p class="left tech-name">PHP</p>
-            <p class="tech-percentage">80%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 75%" class="tech-length blue-bg">
-            <p class="left tech-name">SQL</p>
-            <p class="tech-percentage">75%</p>
-          </div>
-        </div>
-        <div class="tech">
-          <div style="width: 60%" class="tech-length blue-bg">
-            <p class="left tech-name">Photoshop</p>
-            <p class="tech-percentage">60%</p>
-          </div>
-        </div>
-      </div> -->
     </div>
-    <div id="projects">
+    <div id="projects" class="section">
       <ul>
-        <li class="project project-half-gray">
-          <div class="project-wrapper">
-            <div class="project-img-holder left">
-              <img src="assets/images/uedajpn.png" alt="" class="center img-responsive">
-            </div>
-            <div class="project-detail left center ">
-              <a href="https://uedajpn.000webhostapp.com/" class="project-link" target="_blank">
-                <h5>UEDAJPN</h5>
-              </a>
-              <p class="project-desc"><strong>UEDAJPN</strong> is an e-commerce website that will be providing all bio products like skin care, hair care, makeup products, etc..</p>
-              <p class="tech-used">Technology used</p>
-              <ul class="center">
-                <li class="small-tech">HTML5</li>
-                <li class="small-tech">SASS</li>
-                <li class="small-tech">Javascript</li>
-                <li class="small-tech">jquery</li>
-                <li class="small-tech">Ajax</li>
-                <li class="small-tech">PHP</li>
-                <li class="small-tech">SQL</li>
-              </ul>
-            </div>
+        <li class="project project-bg">
+          <div class="project-img-holder">
+            <img src="assets/images/uedajpn.png" alt="" class="img-responsive">
           </div>
-        </li>
-        <li class="project project-half-gray">
-          <div class="project-wrapper">
-            <div class="project-img-holder">
-              <img src="assets/images/besound.png" alt="" class="center img-responsive">
-            </div>
-            <div class="project-detail center ">
-              <a href="https://codepen.io/KhanSar/full/RJqORr/" class="project-link" target="_blank">
-                <h5>BeSound</h5>
-              </a>
-              <p class="project-desc"><strong>BeSound</strong> is a Landing page which was a challenge from <a class="anchor" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
-              <p class="tech-used">Technology used</p>
-              <ul class="center">
-                <li class="small-tech">HTML5</li>
-                <li class="small-tech">CSS3</li>
-              </ul>
-            </div>
+          <div class="project-detail ">
+            <a href="https://uedajpn.000webhostapp.com/" class="project-link" target="_blank">
+              <h2 class="project-name">UEDAJPN</h2>
+            </a>
+            <p class="project-desc"><strong>UEDAJPN</strong> is an e-commerce website that will be providing all bio products like skin care, hair care, makeup products, etc..</p>
+            <p class="tech-used">Technology used</p>
+            <ul class="tech-holder">
+              <li class="tech">HTML5</li>
+              <li class="tech">SASS</li>
+              <li class="tech">Javascript</li>
+              <li class="tech">jquery</li>
+              <li class="tech">Ajax</li>
+              <li class="tech">PHP</li>
+              <li class="tech">SQL</li>
+            </ul>
           </div>
+          <hr>
         </li>
-        <li class="project project-half-gray">
-          <div class="project-wrapper">
-            <div class="project-img-holder">
-              <img src="assets/images/portfolio.png" alt="" class="center img-responsive">
-            </div>
-            <div class="project-detail center ">
-              <a href="https://codepen.io/KhanSar/pen/NjypdQ" class="project-link" target="_blank">
-                <h5>Portfolio</h5>
-              </a>
-              <p class="project-desc"><strong>Portfolio</strong> was a challenge from <a class="anchor" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
-              <p class="tech-used">Technology used</p>
-              <ul class="center">
-                <li class="small-tech">HTML5</li>
-                <li class="small-tech">CSS3</li>
-                <li class="small-tech">bootstrap 3</li>
-              </ul>
-            </div>
+        <li class="project project-bg">
+          <div class="project-img-holder">
+            <img src="assets/images/besound.png" alt="" class="img-responsive">
+          </div>
+          <div class="project-detail">
+            <a href="https://codepen.io/KhanSar/full/RJqORr/" class="project-link" target="_blank">
+              <h2 class="project-name">BeSound</h2>
+            </a>
+            <p class="project-desc"><strong>BeSound</strong> is a Landing page which was a challenge from <a class="anchor" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
+            <p class="tech-used">Technology used</p>
+            <ul class="tech-holder">
+              <li class="tech">HTML5</li>
+              <li class="tech">CSS3</li>
+            </ul>
+          </div>
+          <hr>
+        </li>
+        <li class="project project-bg">
+          <div class="project-img-holder">
+            <img src="assets/images/portfolio.png" alt="" class="img-responsive">
+          </div>
+          <div class="project-detail">
+            <a href="https://codepen.io/KhanSar/pen/NjypdQ" class="project-link" target="_blank">
+              <h2 class="project-name">Portfolio</h2>
+            </a>
+            <p class="project-desc"><strong>Portfolio</strong> was a challenge from <a class="anchor" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp.org</a></p>
+            <p class="tech-used">Technology used</p>
+            <ul class="tech-holder">
+              <li class="tech">HTML5</li>
+              <li class="tech">CSS3</li>
+              <li class="tech">bootstrap 3</li>
+            </ul>
           </div>
         </li>
       </ul>
+      <hr>
+    </div>
+    <div id="contact" class="section">
+
     </div>
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
