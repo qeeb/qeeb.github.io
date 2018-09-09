@@ -1,58 +1,156 @@
-@media only screen and (max-width: 850px){
-  .container {
-    width: 95%;
-    padding: 0 2.5%;
+:root{
+  --mian-color: #00b894;
+  --header-height: 100px;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 300px){
+  .header-wrapper{
+    height: 70px;
   }
-  .header-padding{
-    padding-top: 15px;
-    padding-bottom: 15px;
+  .header-fixed #navbar{
+    padding: 0 10px;
+    top: 70px;
+  }
+  #header,#home{
+    padding:0 10px;
   }
   #name{
-    font-size: 20px;
-  }
-  #title{
-    font-size: 12px;
-  }
-  #navbar{
-    display: none;
-  }
-  #profile-desc{
     font-size: 22px;
   }
+  #profile-desc{
+    font-size: 20px;
+  }
+  .header-fixed{
+    padding: 15px 0;
+  }
+  .header-fixed #menu-bars{
+    right: 5px;
+  }
   .project{
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 5px;
     height: 100%;
-    min-height: 100vh;
-    max-height: 700px;
   }
-  .project-wrapper {
-    width: calc(100% - 5%);
-    margin: 0 2.5%;
-    height: calc(100% - 2px);
-    min-height: 100vh;
-    max-height: 700px;
-    padding-bottom: 20px;
+  .project-img-holder, .project-detail{
+    flex-basis: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    margin: 0;
   }
-  .project-img-holder {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-right: 0;
-    border-right: none;
-    float: unset;
+  hr{
+    bottom: 10px;
   }
-  .project-img-holder, .project-detail {
-    position: relative;
-    top: 10px;
-    transform: translateY(0);
+}
+@media only screen and (min-width: 500px) { 
+  #header,#home{
+    padding:0 20px;
   }
-  projec
-  .img-responsive{
-    max-width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+  #name{
+    font-size: 30px;
   }
-  .project-detail {
-    width: 100%;
-    margin: 0px;
+  #profile-desc{
+    font-size: 25px;
+  }
+  .project{
+    padding: 40px 10px;
+  }
+  .header-fixed{
+    padding: 15px 20px;
+  }
+  .header-fixed #menu-bars{
+    right: 20px;
+  }
+  .project-img-holder, .project-detail{
+    flex-basis: 70%;
+    max-width: 70%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  #header,#home{
+    padding:0 30px;
+  }
+  .header-fixed{
+    padding: 15px 30px;
+  }
+  .header-fixed #menu-bars{
+    right: 30px;
+  }
+}
+@media only screen and (min-width: 900px){
+  #header, #home{
+    padding: 0 10%;
+  }
+  .header-wrapper{
+    height: var(--header-height);
+    align-items: center;
+  }
+  .header-wrapper, #nav-links{
+    flex-direction: row;
+  }
+  #navbar{
+    justify-content: flex-end;
+    max-height: var(--header-height);
+    transition: unset;
+    flex-basis: 60%;
+    position: unset;
+  }
+  .header-fixed{
+    padding: 15px 10%;
+  }
+  .header-fixed #menu-bars{
+    right: 10%;
+  }
+  .header-fixed #navbar{
+    background: transparent;
+  }
+  #name-title{ flex-basis: 40%;}
+  #nav-links li{margin-right: 25px;}
+  #menu-bars{
+    display: none;
+  }
+  .project-img-holder, .project-detail{
+    flex-basis: 60%;
+    max-width: 60%;
+  }
+}
+@media only screen and (min-width: 1024px){
+  .project{
+    height: 100vh;
+    flex-direction: row;
+    padding: 0 10%;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  .project-img-holder{
+    flex-basis: 60%;
+    max-width: 60%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding-right: 20px;
+    border-right: 2px solid var(--mian-color);
+  }
+  .project-detail{
+    flex-basis: 40%;
+    max-width: 40%;
+    box-sizing: border-box;
+    margin-left: 20px;
+
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
   }
 }
