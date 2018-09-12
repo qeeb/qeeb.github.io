@@ -70,6 +70,9 @@
   .header-fixed #menu-bars{
     right: 20px;
   }
+  .header-fixed #navbar{
+    padding: 0 30px;
+  }
   .project-img-holder, .project-detail{
     flex-basis: 70%;
     max-width: 70%;
