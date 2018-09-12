@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   classActive();
   onScrollHeaderChange();
   menu();
-
 });
 function menu() {
   var menubar = document.getElementById("menu-bars");
@@ -69,7 +68,10 @@ function onScrollHeaderChange() {
     currentScrollY = scrollY;
   }) 
   window.onscroll = function () {
-    onScroll();
+    if(currentScrollY != scrollY){
+      document.getElementById("navbar").classList.remove("nav-display");
+      document.getElementById("menu-bars").classList.remove("change");
+    }
     // if scroll come at the middle of home section 
     if (scrollY >= projectsTop - (home.offsetHeight / 2)) {
       // add no-height class to header so i can add later header-fixed and animation 
@@ -90,24 +92,19 @@ function onScrollHeaderChange() {
     }
   }
 }
-function onScroll(event){
-  var scrollPos = $(document).scrollTop();
-  $('.link').each(function () {
-      var currLink = $(this);
-      var refElement = $(currLink.attr("href"));
-      if(scrollPos <= $("#home").height()/2){
-        $("#nav-link li:first-child a").addClass("active");
-      }else{
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#menu-center ul li a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
+$(document).ready(function(){
+  var offset  = $(window).height() / 2 + 30;
+  $(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+		// Assign active class to nav links while scolling
+		$('.section').each(function(i) {
+      if ($(this).position().top - offset <= scrollDistance) {
+        $('#nav-links a.active').removeClass('active');
+        $('#nav-links a').eq(i).addClass('active');
       }
-  });
-}
+		});
+  }).scroll();
+});
 function showOnLoad() {
   let home = document.getElementById("profile");
   // let skills = document.getElementById("skills");
@@ -118,5 +115,4 @@ function showOnLoad() {
     }
   })
 }
-
 
